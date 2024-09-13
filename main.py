@@ -18,6 +18,8 @@ start = timeit.default_timer()
 
 # load images
 list_images = utils.loadImages(args["input"], args["resize"])
+for  img in list_images:
+    print(img.shape)
 
 # create panorama, default using ORB with nfeatures=3000, u can change to SIFT, SURF in features.py or add some argument
 panorama = stitch.multiStitching(list_images)
